@@ -13,7 +13,7 @@ This Google Apps Script automates the process of sending email notifications to 
 
 1. Clone this repository.
 2. Open the Google Apps Script editor.
-3. Create a new script file and copy the contents of `src/main.js` into it.
+3. Create a new script file and copy the contents of `code.gs` into it.
 4. Set up the script properties in the Apps Script editor to store the last processed row.
 
 ## Usage
