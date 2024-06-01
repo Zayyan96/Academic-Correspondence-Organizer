@@ -62,14 +62,14 @@ function sendEmails() {
 
   // Send email to Chemistry teacher
   if (chemistrySubmissions.length > 0) {
-    sendEmail("hamzatariq017@gmail.com", "Chemistry Submissions for Review", chemistrySubmissions);
-    sendEmail("danish5001danish@gmail.com", "Chemistry Submissions for Review", chemistrySubmissions);
+    sendEmail("@gmail.com", "Chemistry Submissions for Review", chemistrySubmissions);
+    sendEmail("@gmail.com", "Chemistry Submissions for Review", chemistrySubmissions);
   }
 
   // Send email to Physics/Maths teacher
   if (physicsMathsSubmissions.length > 0) {
-  sendEmail("hassantariq539@gmail.com", "Physics/Maths Submissions received in last 24 hours", physicsMathsSubmissions);
-  sendEmail("danish5001danish@gmail.com", "Physics/Maths Submissions received in last 24 hours", physicsMathsSubmissions);
+  sendEmail("@gmail.com", "Physics/Maths Submissions received in last 24 hours", physicsMathsSubmissions);
+  sendEmail("@gmail.com", "Physics/Maths Submissions received in last 24 hours", physicsMathsSubmissions);
   }
 
   // Update the last processed row
