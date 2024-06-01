@@ -1,43 +1,42 @@
-# Email Automation for Assignment Submission
+# Online Tuition Assignment Emailer
 
-This project is a Google Apps Script to automate the process of sending email confirmations to students and parents upon successful assignment submissions. It pulls data from two Google Sheets: one with student details and the other with email addresses, and sends customized email notifications.
+This Google Apps Script automates the process of sending email notifications to teachers about student assignment submissions from Google Sheets. 
 
 ## Features
 
-- Reads data from two Google Sheets.
-- Sends confirmation emails to students upon assignment submission.
-- Sends emails to parents.
-- Handles different subjects and assignment names dynamically.
-- Logs errors and sends notifications to the admin if email sending fails.
-- Tracks the last processed row to ensure no data is missed in case of interruptions.
-
-## Prerequisites
-
-- Google Account
-- Google Sheets with student and email data.
-- Google Apps Script access.
+- Fetches assignment submissions from two Google Sheets.
+- Processes and categorizes submissions based on subjects.
+- Sends email notifications to designated teachers with the assignment details.
+- Tracks the last processed row to avoid duplicate emails.
 
 ## Setup
 
-1. **Create Google Sheets:**
-   - Sheet 1: Contains student details.
-   - Sheet 2: Contains email addresses.
-
-2. **Google Apps Script:**
-   - Open your Google Sheets.
-   - Go to `Extensions > Apps Script`.
-   - Delete any code in the script editor and paste the `Code.gs` content from this repository.
-
-3. **Set Script Properties:**
-   - Go to `Project Settings` in the Apps Script editor.
-   - Add a new property `lastProcessedRow` and set it to `0`.
-
-4. **Update Sheet IDs:**
-   - Replace `sheetId1` and `sheetId2` with your Google Sheets IDs in the script.
-
-5. **Deploy:**
-   - Save and deploy the script as per your requirement.
+1. Clone this repository.
+2. Open the Google Apps Script editor.
+3. Create a new script file and copy the contents of `src/main.js` into it.
+4. Set up the script properties in the Apps Script editor to store the last processed row.
 
 ## Usage
 
-- Once setup, the script can be run manually or can be set to run on a trigger (e.g., time-based trigger).
+- Ensure your Google Sheets are populated with student assignment data.
+- Run the `sendEmails` function to process new submissions and send emails.
+- The script will automatically update the last processed row to prevent duplicate emails.
+
+## Configuration
+
+- **Google Sheets IDs:** Update the `sheetId1` and `sheetId2` variables in the script with your specific Google Sheets IDs.
+- **Email Addresses:** Update the email addresses in the `sendEmails` function to match the intended recipients.
+
+## Dependencies
+
+- Google Apps Script
+- Google Sheets API
+- Gmail API
+
+## Contributing
+
+Feel free to submit pull requests or open issues if you find bugs or have feature requests.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
